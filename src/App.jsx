@@ -1,23 +1,25 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
-import Boton from './Boton'
+import Boton from './Componente/Boton.jsx'
 import Redes from './redesSociales.jsx'
 import Aside from './aside.jsx'
 import Stack from './Stack.jsx'
 import ShinyText from './ShinyText';
 import { Link, Route, Routes } from 'react-router'
-import Home from './Home.jsx'
+import Home from './Componente/Pagina/Home.jsx'
 import Trochita from './Trochita.jsx'
 import LaHoya from './LaHoya.jsx'
 import LaZeta from './LaZeta.jsx'
-import RollingGallery from './Imagen.jsx'
+import CircularGallery from './CircularGallery.jsx'
+import MagicBento from './MagicBento.jsx'
+
+
+
+
   
-
-
-
 import Evento from './Evento.jsx'
-  
+
 
 function App() {
 
@@ -53,7 +55,7 @@ function App() {
 <div className="">
     <div className="col-span-6 row-span-2 h-135 w-full hover:scale-103 duration-300 ease-in-out bg-cover bg-center bg-[url(https://www.clarin.com/img/2023/12/07/4Oiud0zVl_1256x620__1.jpg)]">
     <p className='w-35 h-35 justify-self-end'>
-      <img src="/icon.png" alt="" />
+      <img src="/Tutu.jpeg" alt="" />
     </p>
     <p className='justify-self-star text-7xl italic font-serif  text-shadow-amber-900 text-center'>
       TURISMO ESQUEL
@@ -63,19 +65,18 @@ function App() {
       Patagonia Argentina
     </h3>
 
-    </div>
     
 
-
     <div className="flex">
-      <Aside />
+      <Aside className="hidden"/>
       <main className='w-2/3 mt-5'>
        
    
-      <div className='flex gap-2 justify-center top-0 sticky w-full'>
+      <div className='flex gap-2 justify-center top-0 sticky w-full flex-wrap '>
         {listaItems}
       </div>
-       <Routes>
+      <div className='px-10'>
+           <Routes>
           <Route path='/'element={<Home />} />
           <Route path='/evento'element={<Evento />} />
           <Route path='/trochita'element={<Trochita />} />
@@ -83,6 +84,8 @@ function App() {
           <Route path='/lahoya'element={<LaHoya />} />
 
         </Routes>
+      </div>
+    
 
   
     <div className="col-span-4 col-start-2 row-start-8">
@@ -97,11 +100,15 @@ function App() {
     <div className="col-span-6 row-start-9">
  
     </div>
-<RollingGallery autoplay={true} pauseOnHover={true} />
+
 
 
         </main>
         <Aside />
+        </div>
+    <div style={{ height: '600px', position: 'relative' }}>
+  <CircularGallery bend={0} textColor="#ffffff" borderRadius={0.05} scrollEase={0.02}/>
+</div>
 
     </div>
          <img className='h-40 w-full'  src="https://chubutpatagonia.gob.ar/wp-content/uploads/2020/06/02.jpg" alt="" />

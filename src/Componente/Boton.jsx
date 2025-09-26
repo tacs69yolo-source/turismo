@@ -6,8 +6,8 @@ const Boton = (props) => {
   return (
     <StyledWrapper>
 
-    <Link to={props.link} className='flex text-2xl'> 
-      <button className='sd:w-1/8'> 
+    <Link to={props.link} className='text-2xl'> 
+      <button className='sd:w-2 sd:text-7xl text-xs'> 
           {props.text}
       </button>
       
@@ -26,7 +26,7 @@ const StyledWrapper = styled.div`
    background-color: #61AB44;
    color: #004718;
    font-weight: bolder;
-   font-size: 16px;
+ 
   }
 
   button:hover {
