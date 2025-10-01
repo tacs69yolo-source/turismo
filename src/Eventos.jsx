@@ -1,5 +1,4 @@
 import React from 'react'
-import ShinyText from './ShinyText'
 import Stack from './Stack'
 
 const Evento = () => {
@@ -15,25 +14,13 @@ const Evento = () => {
 ];
 
   return (
-    <div>
-      <div className="w-1/2">
-      <h1 className='justify-center'>
+    <div className='justify-center'>
+      <div className="">
+        <br />
+      <h1 className='text-center overline'>
         Fundamentacion
       </h1>
-      <ShinyText 
-  text="JHOOOOOOOOOOOOOOOOOOLAAAAAAAAAA" 
-  disabled={false} 
-  speed={3} 
-  className='custom-class' 
-/>
-
-      <Stack
-  randomRotation={true}
-  sensitivity={180}
-  sendToBackOnClick={false}
-  cardDimensions={{ width: 200, height: 200 }}
-  cardsData={images}
-/>
+      
       <p>
         El nombre de “Fiesta” que adopta este evento nace y se consolida en la intención de valorar y celebrar los sensibles e indudables aportes que hace a la calidad de vida de una comunidad el constituirse en destino turístico. Festejamos por tener la oportunidad de conocer a quienes nos visitan, festejamos por el impulso que nos dan para desplegar nuestra propia identidad, festejamos porque al abrir nuestro hogar al encuentro y al diálogo, sin duda somos mejores. Con la alegría de nuestro recorrido local que ya lleva 18 años, resaltamos que identifican esta celebración nuestra: 
         <ul>
@@ -75,8 +62,8 @@ const Evento = () => {
         La invitación a participar se hace extensiva a todo el público interesado en seguir explorando conjuntamente el poder del turismo como fuerza para la innovación, el desarrollo inclusivo y el bienestar de nuestras comunidades en un camino de sostenibilidad.
       </p>
     </div>
-    <div className="w-1/2">
-      <h1>
+    <div className="">
+      <h1 className='text-center overline'>
         Objetivos
       </h1>
       <p>
@@ -94,7 +81,7 @@ En tal sentido, los objetivos específicos permanentes de la Fiesta son:
     •	Fortalecer las actividades académicas a través de la acción de las instituciones educativas locales, vinculándolas con la realidad del sistema turístico de la Comarca Los Alerces.
   </li>
 </ul>
-<h1>
+<h1 className='text-center overline'>
   Actividades Propuestas
 </h1>
       </p>
@@ -117,7 +104,17 @@ En tal sentido, los objetivos específicos permanentes de la Fiesta son:
         </ul>
     
     </div>
+    <div className=' place-self-end '>
+    <Stack
+  randomRotation={true}
+  sensitivity={180}
+  sendToBackOnClick={false}
+  cardDimensions={{ width: 200, height: 200 }}
+  cardsData={images}
+/>
+</div>
     </div>
+    
   )
 }
 
