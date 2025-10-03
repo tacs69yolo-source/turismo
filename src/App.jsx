@@ -58,7 +58,7 @@ function App() {
       <div className='flex gap-2 justify-center top-0 sticky w-full flex-wrap '>
         {listaItems}
       </div>
-      <div className='my-3'>
+      <div className='my-20'>
            <Routes>
           <Route path='/'element={<Home />} />
           <Route path='/evento'element={<Evento />} />

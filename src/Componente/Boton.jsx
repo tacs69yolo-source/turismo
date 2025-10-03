@@ -26,7 +26,7 @@ const StyledWrapper = styled.div`
    background-color: #61AB44;
    color: #004718;
    font-weight: bolder;
- 
+    z-index:10;
   }
 
   button:hover {
